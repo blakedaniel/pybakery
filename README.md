@@ -1,2 +1,2 @@
 ## Quick Demo
-![](demo-vid.gif)
+![](demo-vid.mov)
