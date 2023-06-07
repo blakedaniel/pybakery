@@ -1,2 +1,2 @@
 ## Quick Demo
-[](demo-vid.gif)
+[](https://github.com/blakedaniel/pybakery/blob/main/demo-vid.gif)
