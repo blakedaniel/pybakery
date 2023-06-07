@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+<!-- filter -->
+<!-- recipes -->
+
+{% include 'snippets/recipes.html' %}
+<div id="basket_container">
+<!-- basket -->
+{% include 'snippets/basket.html' %}
+<!-- calculate -->
+{% include 'snippets/calculate.html' %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<h3 class="section_title">Recipes</h3>
+<div class="recipes">
+    {% for recipe in recipes %}
+    <form method="post" class="recipe">
+    {% csrf_token %}
+        <!-- pull all objects from Recipes model -->
+        <ul>
+            <li class="recipe_title recipe_item"><h4>{{ recipe.name }}</h4></li>
+            <li class="recipe_img recipe_item"><img src="{{ recipe.image.url }}"></li>
+            <li class="recipe_quant recipe_item"><input type="number" name="quantity" value="{{ recipe.quantity }}"></li>
+            <li class="recipe_add recipe_item"><button formaction="{% url 'recipes' %}" name="recipe" value="{{ recipe }}">Add</button></li>
+            <!-- update the above # to the view url associated with the "addToBasket" model function -->
+            <!-- recipe in value should be the Recipe objcet being sent to the view then to the model function -->
+        </ul>
+    </form>
+    {% endfor %}
+</div>

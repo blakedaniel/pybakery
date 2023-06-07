@@ -1,0 +1,21 @@
+# Units commonly used in baking
+# Divided into metric and imperial systems
+
+# Metric units
+gram = [g]
+kilogram = [kg]
+milliliter = [mL]
+liter = [L]
+
+# Imperial units
+ounce = [oz]
+pound = [lb]
+teaspoon = [tsp]
+tablespoon = [tbsp]
+
+# Derived units
+fluid_ounce = [floz] = 29.5735*mL
+cup = [cup] = 236.588*mL
+pint = [pt] = 473.176*mL
+quart = [qt] = 946.353*mL
+gallon = [gal] = 3.78541*L

@@ -1,0 +1,25 @@
+# poetry stuff
+poetry.lock
+/bakery
+pyproject.toml
+/tests
+
+#fly stuff
+fly.txt
+
+# vscode stuff
+.vscode
+
+# python stuff
+__pycache__/
+*.py[cod]
+*$py.class
+
+# sensitive or environment-specific files
+.env
+.env.local
+.env.*.local
+.env.test
+.env.test.local
+
+

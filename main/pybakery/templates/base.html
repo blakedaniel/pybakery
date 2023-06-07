@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}PyBakery{% endblock %}</title>
+</head>
+<header>
+    <div class="container">
+    {% include 'snippets/nav.html' %}
+    {% block header %}
+    {% endblock %}
+    </div>
+</header>
+<body>
+    <div class="container">
+    {% block body %}
+    {% endblock %}
+    </div>
+</body>
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>

@@ -1,0 +1,15 @@
+<div>
+    <!-- add aggregated basket items here -->
+    {% if calculation %}
+    <form method="post">
+        {% csrf_token %}
+        <h3>Calculation</h3>
+        <button formaction="{% url 'recipes' %}" name="calc_clear">Clear</button>
+        <ul>
+        {% for item in calculation %}
+        <li class="calc_item" >{{ item.ingredient }}: {{ item.quantity }} {{ item.unit }}</li>
+        {% endfor %}
+    </form>
+    {% endif %}
+    </ul>
+</div>

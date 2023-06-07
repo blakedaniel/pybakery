@@ -1,0 +1,29 @@
+<div class="basket">
+    {% if basket %}
+    <form method="post">
+        <h3 class="section_title">Basket</h3>
+        <div id="basket_buttons">
+            <button class="basket_button" formaction="{% url 'recipes' %}" name="calculate">Calculate</button>
+            <button class="basket_button" formaction="{% url 'recipes' %}" name="basket_clear">Clear</button>
+        </div>
+        {% csrf_token %}
+        <table>
+            <thead>
+                <td><h4>Recipe</h4></td>
+                <td><h4>Ingredient</h4></td>
+                <td><h4>Quantity</h4></td>
+                <td><h4>Units</h4></td>
+            </thead>
+            {% for ingredient in basket %}
+            <!-- pull all objects from basket model -->
+            <tr>
+                <td>{{ ingredient.recipe }}</td>
+                <td>{{ ingredient.ingredient }}</td>
+                <td>{{ ingredient.default_quantity }}</td>
+                <td>{{ ingredient.unit }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    {% endif %}
+</div>

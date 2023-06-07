@@ -1,0 +1,93 @@
+/* basic tags */
+h3 {
+    margin: 1em 0;
+}
+
+h4 {
+    margin: .5em;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
+
+.section_title {
+    text-align: center;
+}
+
+/* navigation */
+
+nav.menu > ul {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 0 auto 0 auto;
+}
+
+.menu_item {
+    display: flex;
+}
+
+/* login */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* recipes */
+.recipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.recipe {
+    display: flex;
+}
+
+.recipe > ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.recipe_item {
+    display: flex;
+    margin-top: .5em;
+}
+
+/* Basket */
+.basket {
+    display: flex;
+    justify-content: center;
+}
+
+.basket_button {
+    margin: 0 .5em;
+}
+
+#basket_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#basket_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* calculations */
+
+.calc_item {
+    display: flex;
+}
