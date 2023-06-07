@@ -22,4 +22,7 @@ __pycache__/
 .env.test
 .env.test.local
 
+# docker
+docker-compose.yml
+
 

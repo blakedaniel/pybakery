@@ -16,9 +16,10 @@ RUN poetry install --only main --no-root --no-interaction
 
 COPY main /code
 
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 
-# TODO: replace demo.wsgi with <project_name>.wsgi
 CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "main.wsgi"]

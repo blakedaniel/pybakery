@@ -28,11 +28,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['pybakery.fly.dev',
-                 '127.0.0.1']
+                 '127.0.0.1',
+                 '0.0.0.0']
 
 CSRF_TRUSTED_ORIGINS = ['https://pybakery.fly.dev',
                         'https://127.0.0.1',
-                        'http://127.0.0.1']
+                        'http://127.0.0.1',
+                        'https://0.0.0.0',
+                        'http://0.0.0.0']
 
 # Application definition
 
@@ -82,23 +85,12 @@ WSGI_APPLICATION = "main.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgres://postgres:DTnKHXtJmrg2bqr@pybakery-db.flycast:5432',
-#         conn_max_age=600,
-#         conn_health_checks=True,
-#     )
-# }
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'pybakery',
-        "USER": os.getenv('POSTGRES_USER'),
-        "PASSWORD": os.getenv('POSTGRES_PASSWORD'),
-        "HOST": os.getenv('POSTGRES_HOST'),
-        "PORT": "5432",
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('LOCAL_PG'), # change to FLYIO_PG when uploading to fly.io
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 LOGIN_REDIRECT_URL = '/'
