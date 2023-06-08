@@ -26,11 +26,11 @@ Explore more with [live demo](https://pybakery.fly.dev/)
 ```bash
 git clone
 ```
-2. Create key for Django using UUID generator and add this key to the docker-compose.yml file
+2. Create key for Django using UUID generator and add this key to the `docker-compose.yml` file
 ```bash
 python -c 'from UUID import uuid4; print(uuid4())'
 ```
-3. Update password for postgres in docker-compose.yml file and settings.py file
+3. Update password for postgres in `docker-compose.yml` file and `settings.py` file
 4. Build the docker image and run the container. This will also install the dependencies, and run the migrations.
 ```bash
 docker compose up
