@@ -6,9 +6,9 @@ A simple python based web app to store recipes, and calculate the ingredients re
 - Create, update, delete ingredients
 - Calculate total # of ingredients required across added recipes and servings, converting units to most appropriate unit
 ### Future
--[ ] Add support for auto-conversion of weight to volume and vice-versa by ingredient
--[ ] Add support for multiple accounts
--[ ] Add support for upload of recipes from csv file
+[] Add support for auto-conversion of weight to volume and vice-versa by ingredient
+[] Add support for multiple accounts
+[] Add support for upload of recipes from csv file
 
 ## Quick Demo
 ![](demo-vid.mov)
