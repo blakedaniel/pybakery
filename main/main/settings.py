@@ -87,10 +87,16 @@ WSGI_APPLICATION = "main.wsgi.application"
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('LOCAL_PG'), # change to FLYIO_PG when uploading to fly.io
+        default=os.getenv('DATABASE_URL'),
         conn_max_age=600,
         conn_health_checks=True,
-    )
+    ),
+    'local': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pybakery',
+        'USER': 'admin',
+        'PASSWORD': 'asdf1234', # update this to match passwrord in docker-compose.yml
+    }
 }
 
 LOGIN_REDIRECT_URL = '/'

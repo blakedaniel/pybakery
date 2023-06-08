@@ -23,6 +23,6 @@ __pycache__/
 .env.test.local
 
 # docker
-docker-compose.yml
+docker-compose-dev.yml
 
 
