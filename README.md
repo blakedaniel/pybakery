@@ -11,6 +11,7 @@ A simple python based web app to store recipes, and calculate the ingredients re
 - Add support for upload of recipes from csv file
 
 ## Quick Demo
+
 ![](demo-vid.mov)
 
 Explore more with [live demo](https://pybakery.fly.dev/)
