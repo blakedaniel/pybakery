@@ -19,9 +19,7 @@ Explore more with [live demo](https://pybakery.fly.dev/)
 
 ## Local Installation
 ### pre-requisites
-1. Python 3.10+
-2. Poetry
-3. Docker
+1. Docker
 
 ### Steps
 1. Clone the repo
