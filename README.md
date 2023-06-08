@@ -28,23 +28,23 @@ Explore more with [live demo](https://pybakery.fly.dev/)
 ```bash
 git clone
 ```
-1. Create key for Django using UUID generator and add this key to the docker-compose.yml file
+2. Create key for Django using UUID generator and add this key to the docker-compose.yml file
 ```bash
 python -c 'from UUID import uuid4; print(uuid4())'
 ```
-1. Update password for postgres in docker-compose.yml file and settings.py file
-1. Build the docker image and run the container. This will also install the dependencies, and run the migrations.
+3. Update password for postgres in docker-compose.yml file and settings.py file
+4. Build the docker image and run the container. This will also install the dependencies, and run the migrations.
 ```bash
 docker compose up
 ```
-1. Enter pybakery container, navigate to `app` directory and launch poetry shell
+5. Enter pybakery container, navigate to `app` directory and launch poetry shell
 ```bash
 docker exec -it pybakery bash
 cd app
 poetry shell
 ```
-1. Create superuser
+6. Create superuser
 ```bash
 python manage.py createsuperuser
 ```
-1. Navigate to `http://localhost:8000/admin` and login with the superuser credentials
+7. Navigate to `http://localhost:8000/admin` and login with the superuser credentials
