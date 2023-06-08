@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: asdf1234 # update to more secure password
+      POSTGRES_DB: pybakery
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://admin:asdf1234@db/pybakery
+      SECRET_KEY: <secret_key> # update this
+    depends_on:
+      - db
