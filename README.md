@@ -12,7 +12,6 @@ A simple python based web app to store recipes, and calculate the ingredients re
 
 ## Quick Demo
 ![](demo-vid.gif)
-
 Explore more with [live demo](https://pybakery.fly.dev/)
 - username: `default`
 - password: `pybakery1234`
